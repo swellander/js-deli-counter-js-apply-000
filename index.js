@@ -14,11 +14,11 @@ function nowServing(line) {
   }
 }
 
-function currentLine() {
-  if (katzDeliLine.length > 1) {
+function currentLine(line) {
+  if (line.length > 1) {
     var arr = [];
-    for (let i = 0; i < katzDeliLine.length; i++) {
-      arr.push((i + 1) + '. ' + katzDeliLine[i]);
+    for (let i = 0; i < line.length; i++) {
+      arr.push((i + 1) + '. ' + line[i]);
     }
     return 'The line is currently: ' + arr.join(', ');
   } else {
