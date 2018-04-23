@@ -12,3 +12,13 @@ function nowServing() {
     return katzDeli.shift();
   }
 }
+
+function currentLine() {
+  if (katzDeli.length > 1) {
+    var arr = [];
+    for (let i = 0; i < katzDeli.length; i++) {
+      arr.push((i + 1) + '. ' + katzDeli[i]);
+    }
+    return 'The line is currently: ' + arr.join(', ');
+  }
+}
