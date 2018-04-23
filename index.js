@@ -5,12 +5,12 @@ function takeANumber(line, name) {
   return 'Welcome, ' + name + '. You are number ' + line.length + ' in line.'
 }
 
-function nowServing() {
+function nowServing(line) {
   console.log(katzDeliLine);
-  if (katzDeliLine.length === 0) {
+  if (line.length === 0) {
     return 'There is nobody waiting to be served!';
   } else {
-    return 'Currently serving ' + katzDeliLine.shift() + '.';
+    return 'Currently serving ' + line.shift() + '.';
   }
 }
 
